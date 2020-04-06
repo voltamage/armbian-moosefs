@@ -4,7 +4,7 @@ normal=$(tput sgr0)
 
 echo "${bold}[UPDATING HOSTS]${normal}"
 cp /etc/hosts.bak /tmp/hosts
-curl https://raw.githubusercontent.com/voltamage/notes/master/armbian/tmp/hosts -# >> /tmp/hosts
+curl https://raw.githubusercontent.com/voltamage/armbian-glusterfs/master/tmp/hosts -# >> /tmp/hosts
 sudo mv /tmp/hosts /etc/hosts
 
 echo ""
