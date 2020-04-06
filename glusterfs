@@ -42,7 +42,10 @@ sudo mount -av
 echo ""
 echo "${bold}[REVIEW]${normal}"
 echo "${bold}[Review critical services]${normal}"
+echo "[Services]"
 systemctl --type=service | grep 'chrony\|glusterd\|rpcbind\|smartd'
+echo "[Chrony NTP sync]"
+chronyc sourcestats
 read -p "Press any key to continue..." -n1 -s
 echo ""
 echo "${bold}[Review fstab]${normal}"
