@@ -20,6 +20,8 @@ echo ""
 echo "${bold}[CONFIGURING]${normal}"
 echo "${bold}[Configuring GLUSTERD SERVICE]${normal}"
 sudo systemctl enable --now glusterd.service
+echo "${bold}[Configuring CHRONYD SERVICE (in case it wasn't up already)]${normal}"
+sudo systemctl enable --now chrony.service
 
 echo ""
 echo "${bold}[GLUSTERFS]${normal}"
