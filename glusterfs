@@ -42,7 +42,7 @@ sudo mount -av
 echo ""
 echo "${bold}[REVIEW]${normal}"
 echo "${bold}[Review critical services]${normal}"
-systemctl --type=service | grep 'glusterd\|lvm2-monitor\|rpcbind\|smartd'
+systemctl --type=service | grep 'chrony\|glusterd\|rpcbind\|smartd'
 read -p "Press any key to continue..." -n1 -s
 echo ""
 echo "${bold}[Review fstab]${normal}"
