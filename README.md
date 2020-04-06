@@ -7,9 +7,9 @@ passwd>1234
 exit  
 ssh $IP  
 ```
-sudo apt-get -y install curl && bash -c "$(curl -fsSL https://raw.githubusercontent.com/voltamage/notes/master/armbian/oh-my-zsh_install)"
+sudo apt-get -y install curl && bash -c "$(curl -fsSL https://raw.githubusercontent.com/voltamage/armbian-glusterfs/master/oh-my-zsh_install)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/voltamage/notes/master/armbian/oh-my-zsh_configure)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/voltamage/armbian-glusterfs/master/oh-my-zsh_configure)"
 ```
 Powerlevel10k | Input
 --------------|------
@@ -27,7 +27,7 @@ enable transient prompt (yes)|y
 instant prompt mode (verbose)|3
 apply changes to .zshrc|y
 ```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/voltamage/notes/master/armbian/system_install)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/voltamage/armbian-glusterfs/master/system_install)"
 sudo armbian-config
 ```
 personal>hostname>$NEWHOSTNAME  
@@ -38,6 +38,6 @@ sudo armbian-config
 ```  
 system>DTB>hc1>reboot  
 ```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/voltamage/notes/master/armbian/hosts)"
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/voltamage/notes/master/armbian/glusterfs)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/voltamage/armbian-glusterfs/master/hosts)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/voltamage/armbian-glusterfs/master/glusterfs)"
 ```
