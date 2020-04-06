@@ -4,8 +4,12 @@ normal=$(tput sgr0)
 
 echo "${bold}[INSTALLING]${normal}"
 echo "${bold}[Installing prerequisites]${normal}"
-sudo apt-get -y install acl glusterfs-server lvm2 rpcbind thin-provisioning-tools xfsprogs
-echo ": sudo apt-get install acl glusterfs-server lvm2 rpcbind thin-provisioning-tools xfsprogs" >> ~/.zsh_history
+sudo apt-get -y install acl lvm2 rpcbind thin-provisioning-tools xfsprogs
+echo ": sudo apt-get install acl lvm2 rpcbind thin-provisioning-tools xfsprogs" >> ~/.zsh_history
+
+echo "${bold}[Installing glusterfs-server backport]${normal}"
+sudo apt-get -t buster-backports install glusterfs-server
+echo ": sudo apt-get install glusterfs-server" >> ~/.zsh_history
 
 echo ""
 echo "${bold}[UPDATING]${normal}"
