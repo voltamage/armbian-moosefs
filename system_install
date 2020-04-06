@@ -92,6 +92,10 @@ comm -12 <(grep 'sudo apt-get install' ~/.zsh_history | sed '/|/d' | awk '{$1=$2
 echo ""
 echo "${bold}[REVIEW]${normal}"
 echo "${bold}[Review sources]${normal}"
+echo "[Directory]"
+ls /etc/apt/sources.list.d/
+echo ""
+echo "[Sources]"
 cat /etc/apt/sources.list /etc/apt/sources.list.d/*.list
 read -p "Press any key to continue..." -n1 -s
 echo ""
