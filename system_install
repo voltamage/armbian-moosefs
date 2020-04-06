@@ -25,16 +25,16 @@ sudo apt-get -y dist-upgrade
 echo ""
 echo "${bold}[Installing SCRIPTS]${normal}"
 echo "${bold}[Installing brsync]${normal}"
-curl https://raw.githubusercontent.com/voltamage/notes/master/armbian/scripts/brsync > ~/scripts/brsync -#
+curl https://raw.githubusercontent.com/voltamage/armbian-glusterfs/master/scripts/brsync > ~/scripts/brsync -#
 sudo chmod u+x ~/scripts/brsync
 echo "${bold}[Installing fnd]${normal}"
-curl https://raw.githubusercontent.com/voltamage/notes/master/armbian/scripts/fnd > ~/scripts/fnd -#
+curl https://raw.githubusercontent.com/voltamage/armbian-glusterfs/master/scripts/fnd > ~/scripts/fnd -#
 sudo chmod u+x ~/scripts/fnd
 echo "${bold}[Installing maintain]${normal}"
-curl https://raw.githubusercontent.com/voltamage/notes/master/armbian/scripts/maintain > ~/scripts/maintain -#
+curl https://raw.githubusercontent.com/voltamage/armbian-glusterfs/master/scripts/maintain > ~/scripts/maintain -#
 sudo chmod u+x ~/scripts/maintain
 echo "${bold}[Installing mfnd]${normal}"
-curl https://raw.githubusercontent.com/voltamage/notes/master/armbian/scripts/mfnd > ~/scripts/mfnd -#
+curl https://raw.githubusercontent.com/voltamage/armbian-glusterfs/master/scripts/mfnd > ~/scripts/mfnd -#
 sudo chmod u+x ~/scripts/mfnd
 echo "${bold}[Installing msrsync]${normal}"
 curl https://raw.githubusercontent.com/jbd/msrsync/master/msrsync > ~/scripts/msrsync -#
@@ -44,7 +44,7 @@ curl https://raw.githubusercontent.com/lahwaacz/Scripts/master/rmshit.py > ~/scr
 sed -i '/.viminfo/d' ~/scripts/rmshit.py
 sudo chmod u+x ~/scripts/rmshit.py
 echo "${bold}[Installing ALIASES]${normal}"
-curl https://raw.githubusercontent.com/voltamage/notes/master/armbian/.oh-my-zsh/custom/aliases.zsh > ~/.oh-my-zsh/custom/aliases.zsh -#
+curl https://raw.githubusercontent.com/voltamage/armbian-glusterfs/master/.oh-my-zsh/custom/aliases.zsh > ~/.oh-my-zsh/custom/aliases.zsh -#
 
 echo ""
 echo "${bold}[CLEANING]${normal}"
@@ -71,13 +71,13 @@ rm /tmp/odroid.shutdown
 echo "${bold}[Configuring PACKAGES]${normal}"
 echo "${bold}[Configuring aria2]${normal}"
 mkdir ~/.config/aria2
-curl https://raw.githubusercontent.com/voltamage/notes/master/armbian/.config/aria2/aria2.conf > ~/.config/aria2/aria2.conf -#
+curl https://raw.githubusercontent.com/voltamage/armbian-glusterfs/master/.config/aria2/aria2.conf > ~/.config/aria2/aria2.conf -#
 echo "${bold}[Configuring htop]${normal}"
 sudo rm -rf /root/.config/htop
 sed -i -e '/tree_view/c\tree_view=1' ~/.config/htop/htoprc
 echo "${bold}[Configuring neofetch]${normal}"
 mkdir ~/.config/neofetch
-curl https://raw.githubusercontent.com/voltamage/notes/master/armbian/.config/neofetch/config.conf > ~/.config/neofetch/config.conf -#
+curl https://raw.githubusercontent.com/voltamage/armbian-glusterfs/master/.config/neofetch/config.conf > ~/.config/neofetch/config.conf -#
 echo "${bold}[Configuring vim]${normal}"
 echo "SELECTED_EDITOR="/usr/bin/vim.basic"" > ~/.selected_editor
 sudo cp ~/.selected_editor /root
