@@ -43,6 +43,8 @@ echo ""
 echo "${bold}[REVIEW]${normal}"
 echo "${bold}[Review glusterfs version]${normal}"
 sudo glusterfs --version | grep 'glusterfs '
+echo "${bold}[Review backports]${normal}"
+dpkg -l | grep '~bpo'
 echo "${bold}[Review critical services]${normal}"
 echo "[Services]"
 systemctl --type=service | grep 'chrony\|glusterd\|rpcbind\|smartd'
