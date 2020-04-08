@@ -1,3 +1,4 @@
+alias backport="dpkg -l | grep '~bpo'"
 alias crsync='sudo rsync --acls --archive --block-size=131072 --partial --progress --recursive --stats -vv'
 alias diskhealth='sudo smartctl -i /dev/sda && sudo smartctl -A /dev/sda'
 alias glusterc='sudo ls -la -R /mnt/gluster | wc -l'
